@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Website</title>
+    <!-- *******Google fonts family****** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- *******Bootstrap cdn****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+     <!-- *******Google fonts****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- *******Google Icons****** -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <!-- ************Aos cdn css********** -->
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+       
+     * {
+     font-family: "Oleo Script", system-ui;
+     font-weight: 400;
+     font-style: normal;
+     box-sizing: border-box;
+     }
+ 
+     body {
+     overflow-x: hidden;
+     }
+ 
+    .navbar-light .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 25px;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.5s;
+    outline: none;
+ 
+  
+    }
+
+    .navbar-light{
+    background-color: rgb(71, 71, 71);
+ 
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+    }
+
+    .navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 15px;
+    
+   }
+
+    @media (max-width: 768px) {
+    .navbar-nav.btn {
+        text-align: center;
+    }
+    .hero-header {
+        height: 100vh;
+    }
+} 
+
+
+
+@media (min-width: 992px) {
+    .navbar-light {
+       
+        width: 100%;
+        left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
+    }
+
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -9px;
+        left: 50%;
+        background: #86b817;
+        transition: 0.5s;
+    }
+}
+
+
+.dropdown-item:hover, 
+.dropdown-item:active, 
+.dropdown-item.active {
+    background-color: #86b817 !important;
+   
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+  
+    transition: all 0.3s ease;
+  
+}
+
+.dropdown-menu:hover {
+    background:gray;
+    color: white;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+ 
+         .hero-section {
+             background-image: url('./images/pricing.jpeg');
+             background-size: cover;
+             background-position: center;
+             height: 75vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             position: relative;
+         }
+ 
+         .hero-content {
+             text-align: center;
+             color: #fff;
+             z-index: 1;
+         }
+ 
+         .hero-content h1 {
+             font-size: 3rem;
+             font-weight: 700;
+             margin-bottom: 1rem;
+         }
+ 
+         .hero-content p {
+             font-size: 1.2rem;
+             opacity: 0.8;
+         }
+ 
+         .overlay {
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background-color: rgba(0, 0, 0, 0.4);
+         }
+ 
+         .search-icon {
+             color: #fff;
+             font-size: 1.2rem;
+             cursor: pointer;
+         }
+
+
+         .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+            font-size: 1.8rem;
+        }
+
+        .section-subtitle {
+            font-family: 'Cursive', sans-serif;
+            color: #7e8c8d;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card .card-header {
+            background-color: #e8f5f9;
+            color: #008c9e;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 20px;
+        }
+
+        .advanced-header {
+            background-color: #0b3c4f;
+            color: #fff;
+            position: relative;
+        }
+
+        .advanced-header::after {
+            content: 'Popular';
+            background-color: #ffab00;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .card-body p {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .features-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .features-list li {
+            margin: 8px 0;
+            color: #008c9e;
+        }
+
+        .features-list li::before {
+            content: '✔';
+            color: #4caf50;
+            margin-right: 8px;
+        }
+
+        .get-started-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 30px;
+            background-color: #004d4f;
+            color: white;
+            font-weight: bold;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .get-started-btn:hover {
+            background-color: #003636;
+        }
+
+        .newsletter-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./images/event.jpg') no-repeat center center;
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+      
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background-color: #00b4d8;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #0096c7;
+        }
+
+        .newsletter-form button i {
+            font-size: 1.2rem;
+        }
+      
+
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .faq-title {
+            color: #2c3e50;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .faq-subtitle {
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        .accordion-button {
+            background-color: #fff;
+            color: #2c3e50;
+            font-weight: bold;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px !important;
+            margin-bottom: 10px;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #fff;
+            color: #2c3e50;
+            box-shadow: none;
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: #e0e0e0;
+        }
+        .accordion-body {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+
+
+        .social-icons a {
+      color: #333;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+    .instagram-post {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin: 5px;
+    }
+        </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container">
+            <a href="#" class="navbar-brand" data-aos="fade-right">
+                <h1 class="m-0" style="color: #86b817;"><i class="fa fa-map-marked-alt"></i> Tourist</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" data-aos="fade-left">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent" data-aos="fade-down" data-aos-duration="1200">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="./Travel.html" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="100">Home</a></li>
+                    <li class="nav-item dropdown" data-aos="fade" data-aos-delay="200">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./our journey.html">Our Journey</a></li>
+                            <li><a class="dropdown-item" href="./out team.html">Our Team</a></li>
+                            <li><a class="dropdown-item" href="./Ourpricing.html">Our Pricing Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" data-aos="fade" data-aos-delay="300">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./accomodation.html">Accommodation</a></li>
+                            <li><a class="dropdown-item" href="./transportation.html">Transportation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#destination" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="400">Destination</a></li>
+                    <li class="nav-item"><a href="#packages" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="500">Packages</a></li>
+                    <li class="nav-item"><a href="#onlinebooking" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="600">Online Booking</a></li>
+                    <li class="nav-item"><a href="#ourguide" class="nav-link"style="color: white;" data-aos="fade" data-aos-delay="700">Our Guide</a></li>
+                </ul>
+                <a href="./form.html" class="btn rounded-pill ms-lg-3" style="background-color: #86b817; color: white; width: 100px;" data-aos="fade" data-aos-delay="800">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-down">Our Pricing Plan</h1>
+            <p data-aos="fade-left">HOME | About </p>
+        </div>
+    </header>
+
+
+
+
+    <div class="container mt-5">
+        <div class="text-center" data-aos="fade-up">
+            <p class="section-subtitle">Let's Checkin</p>
+            <h2 class="section-title">Affordable Pricing Plans</h2>
+        </div>
+    
+        <div class="row justify-content-center gy-4">
+           
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card pricing-card">
+                    <div class="card-header">
+                        <i class="bi bi-gear-fill me-2"></i>Basic Plan
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="price">$785.00 <span class="text-muted" style="font-size: 0.8rem;">/ Per Night</span></div>
+                        <p>Essential services for basic and single person seeking.</p>
+                        <ul class="features-list">
+                            <li>Up to 2 members</li>
+                            <li>Room Service Fees</li>
+                            <li>Driver Service Fees</li>
+                            <li>Tour management</li>
+                            <li>Collaboration</li>
+                            <li>Entrance Fees</li>
+                            <li>Guide Fees in Destination</li>
+                        </ul>
+                        <button class="get-started-btn">Get Started</button>
+                    </div>
+                </div>
+            </div>
+    
+           
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card pricing-card">
+                    <div class="card-header advanced-header">
+                        <i class="bi bi-lightbulb-fill me-2"></i>Advanced Plan
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="price">$980.00 <span class="text-muted" style="font-size: 0.8rem;">/ Per Night</span></div>
+                        <p>Essential services for basic and single person seeking.</p>
+                        <ul class="features-list">
+                            <li>Up to 2 members</li>
+                            <li>Room Service Fees</li>
+                            <li>Driver Service Fees</li>
+                            <li>Tour management</li>
+                            <li>Collaboration</li>
+                            <li>Entrance Fees</li>
+                            <li>Auto refresh ads</li>
+                        </ul>
+                        <button class="get-started-btn">Get Started</button>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card pricing-card">
+                    <div class="card-header">
+                        <i class="bi bi-award-fill me-2"></i>Premium Plan
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="price">$1580.00 <span class="text-muted" style="font-size: 0.8rem;">/ Per Night</span></div>
+                        <p>Essential services for basic and single person seeking.</p>
+                        <ul class="features-list">
+                            <li>Up to 2 members</li>
+                            <li>Room Service Fees</li>
+                            <li>Driver Service Fees</li>
+                            <li>Tour management</li>
+                            <li>Collaboration</li>
+                            <li>Entrance Fees</li>
+                            <li>Auto refresh ads</li>
+                        </ul>
+                        <button class="get-started-btn">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+    <div class="newsletter-section">
+        <div class="newsletter-content">
+            <h2>Get Updated <br>The Latest News</h2>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your Email" required>
+                
+                <button type="submit">
+                    Select Now <i class="bi bi-send-fill"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="container faq-container">
+        <h1 class="text-center faq-title">FAQ</h1>
+        <h2 class="text-center faq-subtitle">Frequently Ask Questions</h2>
+        <p class="text-center mb-5">Have questions you want answers to?</p>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Q1. How do I start the process of buying a home?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The open-concept layout seamlessly connects the living room with the fully equipped kitchen, boasting top-of-the-line appliances and all the essentials for preparing delicious meals.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Q2. What factors should I consider when choosing a neighborhood?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Content for Q2 goes here.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Q5. How can I negotiate the best price when buying a property?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Content for Q5 goes here.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-dark text-white py-5">
+        <div class="container">
+          <h2 class="mb-4">Get Updated The Latest Newsletter</h2>
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Enter your Email" aria-label="Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" id="button-addon2">Subscribe Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-md-right">
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="./images/price1.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price2.png" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price3.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/price4.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price5.png" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price7.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/price6.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price8.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price9.webp" class="img-fluid instagram-post" alt="Instagram Post">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/price10.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price11.jpg" class="img-fluid instagram-post" alt="Instagram Post">
+            <img src="./images/price12.jpeg" class="img-fluid instagram-post" alt="Instagram Post">
+          </div>
+        </div>
+      </div>
+    
+      <div class="container-fluid bg-dark text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h4>Quick Links</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Home</a></li>
+                <li><a href="#" class="text-white">About Us</a></li>
+                <li><a href="#" class="text-white">Services</a></li>
+                <li><a href="#" class="text-white">Tour Guide</a></li>
+                <li><a href="#" class="text-white">Contact Us</a></li>
+              </ul>
+              
+            </div>
+            <div class="col-md-3">
+              <h4>Get in Touch</h4>
+              <p>+01 234 567 890</p>
+              <p>+09 876 543 210</p>
+              <p>mailinfo00@tourm.com</p>
+              <p>support24@tourm.com</p>
+              <p>789 Inner Lane, Holy Park,<br>California, USA</p>
+            </div>
+            <div class="col-md-6">
+              <h4>About Tourm</h4>
+              <p>Rapidiously myocardinate cross-platform intellectual capital model. Appropriately create interactive infrastructures.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">Presented By <a href="" class="border-bottom" style="color: #86b817; text-decoration: none;">Kanwal</a>Frontend Developer</div>
+      </div>
+    
+        
+
+
+</body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 220, 
+      delay: 340, 
+  });
+</script>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+<!-- ****************888js aos cdn* -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</html>

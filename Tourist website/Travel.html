@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Website</title>
+    <!-- *******Google fonts family****** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- *******main css****** -->
+    <link rel="stylesheet" href="./Travel.css">
+    <!-- *******Bootstrap cdn****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+     <!-- *******Google fonts****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- *******Google Icons****** -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- ************Aos cdn css********** -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+     <!-- __________Pre LOADER___________ -->
+      <div class="preloader">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div class="loader"></div>
+            <div class="loading-text">Loading...</div>
+           
+        </div>
+    </div>
+
+     
+
+     <!-- ******************Address************* Bar -->
+
+     <div class="container-fluid bg-dark px-3 px-lg-5 fixed-top address-bar" style="height: 100px;">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center flex-wrap">
+                    <small class="me-3 text-light" style="font-size: 18px;"data-aos="fade-right" data-aos-delay="500">
+                        <i class="fa fa-map-marked-alt me-2"></i>123 Jamshed Street, Gurumandir +12345678
+                    </small>
+                    <small class="me-3 text-light info" style="font-size: 18px;"data-aos="fade-left" data-aos-delay="700">
+                        <i class="fa fa-envelope-open me-2"></i>info@gmail.com
+                    </small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end info">
+                <div class="d-inline-flex align-items-center" style="height: 45px;" data-aos="flip-left" data-aos-duration="1500">
+                    <a href="#" class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2">
+                        <i class="fab fa-twitter fw-normal"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2">
+                        <i class="fab fa-facebook-f fw-normal"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2">
+                        <i class="fab fa-youtube fw-normal"></i>
+                    </a>
+                    <a href="#" class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2">
+                        <i class="fab fa-linkedin-in fw-normal"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ************ End Address navbar ************ -->
+
+    <!-- ************ Hero Section ************ -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top mt-5">
+        <div class="container">
+            <a href="#" class="navbar-brand" data-aos="fade-down" data-aos-duration="1500">
+                <h1 class="m-0" style="color: #86b817;"><i class="fa fa-map-marked-alt" data-aos="zoom-in" data-aos-delay="300"></i> Tourist</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="fa fa-bars" data-aos="slide-right" data-aos-delay="500"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent" data-aos="fade-down" data-aos-delay="300">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="./Travel.html" class="nav-link" style="color: white;" data-aos="fade-up" data-aos-duration="1000">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#about" data-bs-toggle="dropdown" style="color: white;">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./our journey.html" data-aos="zoom-in">Our Journey</a></li>
+                            <li><a class="dropdown-item" href="./out team.html" data-aos="zoom-in" data-aos-delay="200">Our Team</a></li>
+                            <li><a class="dropdown-item" href="./Ourpricing.html" data-aos="zoom-in" data-aos-delay="400">Our Pricing Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" data-aos="fade-right" data-aos-delay="700">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" data-aos="flip-right" data-aos-delay="200"href="./accomodation.html">Accommodation</a></li>
+                            <li><a class="dropdown-item" data-aos="flip-right" data-aos-delay="400"href="./transportation.html">Transportation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#destination"  class="nav-link" style="color: white;" data-aos="fade-in" data-aos-delay="600">Destination</a></li>
+                    <li class="nav-item"><a href="#packages" class="nav-link" style="color: white;" data-aos="slide-up" data-aos-delay="800">Packages</a></li>
+                    <li class="nav-item"><a href="#onlinebooking" class="nav-link" style="color: white;"data-aos="zoom-out" data-aos-delay="900">Online Booking</a></li>
+                    <li class="nav-item"><a href="#ourguide" class="nav-link"style="color: white;" data-aos="flip-up" data-aos-delay="1000">Our Guide</a></li>
+                </ul>
+                <a target="_blank" href="./form.html" class="btn rounded-pill ms-lg-3" style="background-color: #86b817; color: white; width: 100px;" data-aos="zoom-in-up" data-aos-duration="1500"sv 7mi8 y label}"|">Register</a>
+            </div>
+        </div>
+    </nav>
+        <!-- ************ End Main navbar ************ -->
+
+       <!-- ************  Hero Section ************ -->
+<div class="container-fluid custom-bg py-5 hero-header">
+    <div class="container pt-5">
+        <div class="row justify-content-center mt-5 pt-5">
+            <!-- *********Rotating Text Section****** -->
+            <div class="rotating-text">
+                <div class="circle">
+                    <div class="logo">
+                        <h2>Tourist <br> World</h2>
+                    </div>
+                    <div class="text">
+                        <p><span>Tourist-World - Tour lets / get Start Now</span></p>
+                    </div>
+                </div>
+            </div>
+             <!-- *********End rotatig Text Section****** -->
+
+            <!--***************** Hero Content Section****** -->
+            <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center hero-content">
+                <h1 class="display-3 text-white animated fadeInUp mb-3" 
+                    style="color: #86b817; margin-top: 15%;">
+                    Enjoy Your Vacation with Us
+                </h1>
+                <p class="fs-4 text-white animated fadeInUp mb-4">
+                    "Tourism opens doors to exploring the beauty, culture, and history of diverse destinations around the globe. <br>From breathtaking landscapes to vibrant cities, the world offers endless opportunities for adventure and discovery."
+                </p>
+                <div class="container">
+                    <div class="position-relative w-75 mx-auto animated fadeInUp mb-4">
+                        <input type="text" id="searchInput" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" placeholder="Eg: London">
+                        <button id="searchButton" class="btn rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px; color: black; background-color: #86b817;">
+                            Search
+                </button>
+                    </div>
+                    <div id="searchResults" class="results"style="display:none; color:rgb(255, 255, 255); text-align: center; font-size: 20px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+ <!--***************** Hero Content Section****** -->
+
+
+        <!-- ************ Gallery Section ************ -->
+        <div class="container-fluid py-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container px-2">
+                <div class="gallery-row">
+                    <div class="gallery-item" data-name="london" data-order="1" data-aos="zoom-in" data-aos-duration="1200">
+                        <img src="./images/london.jpg" alt="London">
+                        <p>London</p>
+                    </div>
+                    <div class="gallery-item" data-name="america" data-order="2" data-aos="zoom-in" data-aos-duration="1300">
+                        <img src="./images/america.jpeg" alt="America">
+                        <p>America</p>
+                    </div>
+                    <div class="gallery-item" data-name="china" data-order="3" data-aos="zoom-in" data-aos-duration="1400">
+                        <img src="./images/china.jpeg" alt="China">
+                        <p>China</p>
+                    </div>
+                    <div class="gallery-item" data-name="japan" data-order="4" data-aos="zoom-in" data-aos-duration="1500">
+                        <img src="./images/japan.avif" alt="Japan">
+                        <p>Japan</p>
+                    </div>
+                    <div class="gallery-item" data-name="lahore" data-order="5">
+                        <img src="./images/lahore.jpeg" alt="Lahore">
+                        <p>Lahore</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- ************ End Gallery Section ************ -->
+
+    <!-- ************* About Section ************* -->
+    <div id="about" class="container-xxl py-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="row g-5">
+               
+                <div class="col-lg-6" data-aos="slide-right" data-aos-duration="1200">
+                    <div id="aboutCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/realabout.PNG" alt="" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/travel1.jpg" alt="" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/travel11.PNG" alt="" class="d-block w-100">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#aboutCarousel" role="button" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#aboutCarousel" role="button" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1400">
+                    <h6 class="section-title bg-white text-start pe-3" style="color: #86b817; font-weight:bold; font-size: 24px;">About Us<h6>
+                    <h1 class="mb-4">Welcome to <span style="color: #86b817; font-weight:bold; font-size:35px;">Tourist</span></h1>
+                    <p class="mb-4" data-aos="fade-up" data-aos-duration="1600">Traveling not only broadens horizons but also fosters a deeper understanding of the world and its rich cultural heritage. The tourist world is an ever-growing industry, offering countless possibilities for unforgettable journeys."</p>
+                    <p class="mb-4" data-aos="fade-up" data-aos-duration="1800"> Every destination tells its own story, offering travelers the chance to explore new horizons, meet diverse people, and experience life in ways that go beyond the ordinary</p>
+                    <div class="row gy-2 gx-4 mb-4" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="col-sm-6">
+                            <p class="mb-0"> <i style="color: var(--normal)" class="fa fa-arrow-right me-2"></i> First Class Flights</p>
+                            <p class="mb-0"><i style="color: var(--normal);" class="fa fa-arrow-right me-2"></i> Handpicked Hotels</p>
+                            <p class="mb-0"><i style="color: var(--normal);" class="fa fa-arrow-right me-2"></i> Restaurants Facility</p>
+                            <p class="mb-0"><i style="color: var(--normal);" class="fa fa-arrow-right me-2"></i> Or Gym Area</p>
+                            <p class="mb-0"><i style="color: var(--normal);" class="fa fa-arrow-right me-2"></i> Our Responsibility</p>
+                            <p class="mb-0"><i style="color: var(--normal);" class="fa fa-arrow-right me-2"></i> Our Tour Guide</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- ************* End About Section ********************* -->
+
+      <!-- **************Service Section ************-->
+<div id="service" class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <h6 class="section-title bg-white text-center px-3" style="color: var(--normal);">Services</h6>
+            <h1 class="mb-5">Our Services</h1>
+        </div>
+        <div class="container mt-5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 service-card"cdata-aos="flip-left">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <i class="fa fa-3x fa-globe mb-4" style="color:#86b817;"></i>
+                            <h5>WorldWide Tours</h5>
+                            <p>"Worldwide tours offer a unique opportunity to explore the globe, visiting iconic landmarks and hidden gems across continents. From the majestic pyramids of Egypt to the vibrant streets of Tokyo, each destination presents its own blend of history".</p>
+                        </div>
+                        <div class="service-card-back">
+                            <img src="./images/tour11.jpg" alt="Worldwide Tours">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 service-card" data-aos="flip-right" data-aos-delay="200">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <i class="fa fa-3x fa-hotel mb-4" style="color:#86b817;"></i>
+                            <h5>Hotel Reservation</h5>
+                            <p>"Hotel reservations have never been easier, offering travelers a seamless way to find the perfect stay, whether you're looking for a luxury resort, a cozy boutique hotel, or a budget-friendly option your travel experience smooth and stress-free.".</p>
+                        </div>
+                        <div class="service-card-back">
+                            <img src="./images/event.jpg" alt="Hotel Reservation">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 service-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="service-card-inner">
+                        <div class="service-card-front">
+                            <i class="fa fa-3x fa-cog mb-4" style="color:#86b817;"></i>
+                            <h5>Event Management</h5>
+                            <p>"Event management is all about turning ideas into reality, ensuring every detail is meticulously planned and executed for an unforgettable experience. Whether you're planning a wedding, or large-scale conference, professional event care of everything."</p>
+                        </div>
+                        <div class="service-card-back">
+                            <img src="./images/newevent.jpg" alt="Event Management">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- **************Service Section ************-->
+
+
+    <!-- ************* Destination Section ************* -->
+    <div id="destination"class="container-xxl py-5 destination">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h6 class="section-title bg-white text-center px-3" style="color: #86b817;">Destination</h6>
+                <h1 class="mb-5">Popular Destination</h1>
+            </div>
+          
+            <div class="row g-3">
+                <div class="col-lg-7 col-md-16">
+                    <div class="row g-3">
+                        <div class="col-lg-12 col-md-12" data-aos="fade-right" data-aos-duration="800">
+                            <a href="" class="d-block position-relative overflow-hidden">
+                                <img src="./images/oldthailand.PNG" alt="" class="img-fluid">
+                                <div class="bg-white fw-bold position-absolute top-0 start-0 m-3 py-1 px-2" style="color:chocolate;">30%off</div>
+                                <div class="bg-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="color: #86b817;">Thailand</div>
+                            </a>
+                        </div>
+                    
+                        <div class="col-lg-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
+                            <a href="" class="d-block position-relative overflow-hidden">
+                                <img src="./images/newmalaysia.jpeg" alt="" class="img-fluid">
+                                <div class="bg-white  fw-bold position-absolute top-0 start-0 m-3 py-1 px-2" style="color: chocolate;">50%off</div>
+                                <div class="bg-white  fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="color: #86b817;">Malaysia</div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-12" data-aos="zoom-in" data-aos-delay="400">
+                            <a href="" class="d-block position-relative overflow-hidden">
+                                <img src="./images/newaustralia.png" alt="" class="img-fluid w-100 h-200">
+                                <div class="bg-white  fw-bold position-absolute top-0 start-0 m-3 py-1 px-2" style="color: chocolate">25%off</div>
+                                <div class="bg-white  fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="color: #86b817;">Australia</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6" style="min-height: 350px;" data-aos="fade-left" data-aos-duration="800">
+                    <a href="" class="d-block position-relative h-100 overflow-hidden">
+                        <img src="./images/indonesia.jpeg" alt="" class="img-fluid position-absolute w-100 h-100" style="object-fit: cover;">
+
+                        <div class="bg-white fw-bold position-absolute top-0 start-0 m-3 py-1 px-2" style="color: chocolate;">20% Off</div>
+                        <div class="bg-white fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2" style="color: #86b817;">Indonesia</div>
+                    </a>
+                </div>
+            </div>
+    <!-- ************* End Destination Section ************* -->
+
+            <!-- ***************Package section*************** -->
+
+            <div id="packages" class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center" data-aos="fade-up">
+                        <h6 class="section-title bg-white text-center px-3" style="color: #86b817;">Packages</h6>
+                        <h1 class="mb-5">Awesome Packages</h1>
+                    </div>
+                    <div class="row g-4 justify-content-center">
+
+                        <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-duration="800">
+                            <div class="package-item">
+                                <div class="overflow-hidden">
+                                    <img src="./images/pakage1.jpeg" alt="" class="img-fluid w-100 h-200">
+                                </div>
+
+                                <div class="d-flex border-bottom">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-map-marker-alt me-2" style="color: #86b817;"></i> Thailand
+                                    </small>
+
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-calendar-alt me-2" style="color: #86b817;"></i> 3 days
+                                    </small>
+
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-user-alt me-2" style="color: #86b817;"></i> 2 person
+                                    </small>
+                                </div>
+
+                                       
+                                <div class="text-center p-4">
+                                    <h3 class="mb-0">$149.00</h3>
+                                        <div class="mb-3">
+                                       <small class="fa fa-star" style="color: #86b817;"></small>
+                                       <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                    </div>
+                                   <p>"Thailand is a vibrant destination known for its rich culture, stunning landscapes, and warm hospitality. From the bustling streets of Bangkok to the tranquil beaches of Phuket, Thailand offers a perfect blend of tradition and modernity. "</p>
+                                  <div class="d-flex justify-content-center mb-2">
+                                 <a href="" class="btn btn-sm px-3" style="border-radius: 30px 0 0 30px;background-color: #86b817; color: white;">Read More</a>
+                                <a href="" class="btn btn-sm px-3" style="border-radius: 0 30px 30px 0;background-color: #86b817; color: white;">Book Now</a>
+                              </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                            <div class="package-item">
+                                <div class="overflow-hidden">
+                                    <img src="./images/pakage2.jpeg" alt="" class="img-fluid w-100 h-100">
+                                </div>
+
+                                <div class="d-flex border-bottom">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-map-marker-alt me-2" style="color: #86b817;"></i> Malaysia
+                                    </small>
+
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-calendar-alt me-2" style="color: #86b817;"></i> 3 days
+                                    </small>
+
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-user-alt me-2" style="color: #86b817;"></i> 2 person
+                                    </small>
+                                </div>
+
+                                       
+                                <div class="text-center p-4">
+                                    <h3 class="mb-0">$250.00</h3>
+                                        <div class="mb-3">
+                                       <small class="fa fa-star" style="color: #86b817;"></small>
+                                       <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                    </div>
+                                   <p>"Malaysia is a melting pot of cultures, offering a unique blend of modernity and tradition. From the skyscrapers of Kuala Lumpur to the historic streets of George Town, Malaysia is a country rich in heritage and natural beauty."</p>
+                                  <div class="d-flex justify-content-center mb-2">
+                                 <a href="" class="btn btn-sm px-3" style="border-radius: 30px 0 0 30px;background-color: #86b817; color: white;">Read More</a>
+                                <a href="" class="btn btn-sm px-3" style="border-radius: 0 30px 30px 0;background-color: #86b817; color: white;">Book Now</a>
+                              </div>
+                        </div>
+                        </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                            <div class="package-item">
+                                <div class="overflow-hidden">
+                                    <img src="./images/pakage3.jpeg" alt="" class="img-fluid w-100 h-200">
+                                </div>
+
+                                <div class="d-flex border-bottom">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-map-marker-alt me-2" style="color: #86b817;"></i> Indonesia
+                                    </small>
+
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-calendar-alt me-2" style="color: #86b817;"></i> 3 days
+                                    </small>
+
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-user-alt me-2" style="color: #86b817;"></i> 2 person
+                                    </small>
+                                </div>
+
+                                       
+                                <div class="text-center p-4">
+                                    <h3 class="mb-0">$500.00</h3>
+                                        <div class="mb-3">
+                                       <small class="fa fa-star" style="color: #86b817;"></small>
+                                       <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                     <small class="fa fa-star" style="color: #86b817;"></small>
+                                    </div>
+                                   <p>"Indonesia, the world’s largest archipelago, is home to thousands of islands offering breathtaking landscapes, rich culture, and diverse experiences. From the serene beaches of Bali to the ancient Indonesia visitors with its natural beauty and historical treasures. "</p>
+                                  <div class="d-flex justify-content-center mb-2">
+                                 <a href="" class="btn btn-sm px-3" style="border-radius: 30px 0 0 30px;background-color: #86b817; color: white;">Read More</a>
+                                <a href="" class="btn btn-sm px-3" style="border-radius: 0 30px 30px 0;background-color: #86b817; color: white;">Book Now</a>
+                              </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div> 
+                   </div> 
+                </div> 
+            </div> 
+        
+            <!-- **************pakage section******************** -->
+
+
+            <!-- ************Booking Section*************** -->
+
+            <div id="onlinebooking" class="container-xxl py-5" data-aos="fade-up">
+                <div class="container" data-aos="fade-up" data-aos-delay="200">
+                    <div class="booking p-5"data-aos="fade-up" data-aos-delay="400">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-md-6 text-white" data-aos="fade-right">
+                                
+                                <h1 class="text-white mb-4"> Online Booking</h1>
+                                <p class="mb-4">Plan your dream vacation effortlessly with our seamless online booking platform. From flights and hotels to guided tours and unique experiences, we provide a one-stop solution for all your travel needs. Browse a variety of destinations, compare prices, and customize itineraries to suit your preferences.</p>
+                                <p class="mb-4">our user-friendly interface makes travel planning stress-free. With secure payment options and flexible cancellation policies, we prioritize convenience and peace of mind, so you can focus on making memories.</p>
+                                <a href="" class="btn btn-outline-light py-3 px-5 mt-2">ReadMore</a>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-left" data-aos-delay="600" >
+                                <h1 class="text-white mb-4">
+                                    Book A Tour
+                                </h1>
+
+                                <form action="">
+                                    <div class="row g-3">
+
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
+                                                <label for="name" style="color: white;">Your Name</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Email">
+                                                <label for="Email" style="color: white;">Your Email</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-floating" id="date3">
+                                                <label for="expiryDate" style="color: white;"></label>
+                                                 <input type="date" class="form-control bg-transparent" id="date"  style="color: white;"required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <select name="" id="select1" class="form-select">
+                                                    <option value="1">Malaysia </option>
+                                                    <option value="2">Indonesia </option>
+                                                    <option value="3">Island</option>
+                                                    <option value="3">Europe</option>
+                                                    <option value="3">America</option>
+                                                    <option value="3">China</option>
+                                                    <option value="3">Japan</option>
+                                                    <option value="3">London</option>
+                                                    <option value="3">Germany</option>
+                                                    <option value="3">Lahore</option>
+                                                    <option value="3">Islamabad</option>
+                                                </select>
+                                                <label for="select1">Destination</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px; color: aliceblue;"></textarea>
+                                                <label for="message" style="color: aliceblue;">Special Request</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <a href="./ticket.html" class="btn btn-outline-light w-100 py-3" type="submit" style="font-size: 26px;">Book Now</a>
+                                            
+                                        </div>
+                                      
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- ************Booking Section*************** -->
+
+            <!-- *******************steps start**************888 -->
+
+            <div class="container-xxl py-5" data-aos="fade-up">
+                <div class="container">
+                    <div class="text-center pb-4" data-aos="zoom-in">
+                        <h6 class="section-title bg-white text-center px-3" style="color: #86b817;">Process</h6>
+                        <h1 class="mb-5">Easy Steps</h1>
+                    </div>
+
+                    <div class="row gy-5 gx-4 justify-content-center">
+
+                        <div class="col-lg-4 col-sm-6 text-center pt-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="position-relative  pt-5 pb-4 px-4" style="border:2px solid #86b817;">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="background:#86b817; width: 100px; height: 100px;">
+                                    <i class="fa fa-globe fa-3x text-white"></i>
+                                </div>
+
+                                <h5 class="mt-4">Choose A WorldWide Tours</h5>
+                                <hr class="w-25 mx-auto mt-0" style="background: #86b817;">
+
+                                <p class="mb-0">he idea behind "Choose Your World Tour" is to offer a range of travel options, from cultural explorations and adventure trips to luxury vacations or eco-tourism. This allows individuals to explore iconic landmarks, experience diverse cultures,</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-sm-6 text-center pt-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="position-relative  pt-5 pb-4 px-4" style="border:2px solid #86b817;">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="background:#86b817; width: 100px; height: 100px;">
+                                    <i class="fa fa-dollar-sign fa-3x text-white"></i>
+                                </div>
+
+                                <h5 class="mt-4">Choose A Pakages</h5>
+                                <hr class="w-25 mx-auto mt-0" style="background: #86b817;">
+
+                                <p class="mb-0">Destinations: Mountains, jungles, deserts, or beaches
+                                    Activities: Hiking, camping, safaris, scuba diving, or zip-lining
+                                    Ideal for: Thrill-seekers and outdoor enthusiasts
+                                    Destinations: Group-friendly destinations like Europe or Southeast Asia
+                                    Activities: Guided tours.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-sm-6 text-center pt-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="position-relative  pt-5 pb-4 px-4" style="border:2px solid #86b817;">
+                                <div class="d-inline-flex align-items-center justify-content-center rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="background:#86b817; width: 100px; height: 100px;">
+                                    <i class="fa fa-plane fa-3x text-white"></i>
+                                </div>
+
+                                <h5 class="mt-4">Choose A Destination</h5>
+                                <hr class="w-25 mx-auto mt-0" style="background: #86b817;">
+
+                                <p class="mb-0">Destinations: Family-friendly cities, theme parks like Disneyland, beach resorts
+                                    Activities: Sightseeing, amusement parks, family-focused tours
+                                    Ideal for: Families with kids of all age Activities: Local tours wellness retreats
+                                    Ideal for: Independent seeking </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- *******************steps start**************888 -->
+
+            <!-- ***********************Guide section*************************8 -->
+            <div class="container-xxl py-5" id="ourguide" data-aos="fade-up">
+                <div class="container">
+                    <div class="text-center" data-aos="zoom-in">
+                        <h6 class="section-title bg-white text-center px-3" style="color: #86b817;">Travel Guide</h6>
+                        <h1 class="mb-5">Meet Our Guide</h1>
+                    </div>
+                    <div class="row g-4">
+        
+                        <!--************Card 1************ -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-right" data-aos-delay="100">
+                            <div class="team-item">
+                                <img src="./images/tourist1.jpg" alt="Guide 1" class="img-fluid">
+                                <div class="intro">
+                                    <h5 style="text-align:center;">Liam Anderson</h5>
+                                    
+                                    <p>Their expertise also includes educating travelers on environmental conservation and responsible tourism, leaving you with both incredible memories  fauna,nature’s beauty safely. </p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center icon" style="margin-top: -19px;">
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="text-center p-4" style="height: 90px;">
+                                  
+                                    <h5 class="mb-0" style="color: #070606;">Adventure and Wildlife Expert</h5>
+                                    
+                              </div>
+                            </div>
+                        </div>
+        
+                       <!--************Card 2************ -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="team-item">
+                                <img src="./images/tourist2.avif" alt="Guide 2" class="img-fluid">
+                                <div class="intro">
+                                    <h5 style="text-align: center;">Ethan Patel</h5>
+                                    <p>With a passion for history, art, and traditions, these guides offer immersive experiences into the cultural essence of destinations. They  monuments, and museums. markets to explaining.</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center icon" style="margin-top: -19px;">
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="text-center p-4" style="height: 90px;">
+                                  <h5 class="mb-0"> Mountain Trekking Specialist</h5>
+                                 
+                              </div>
+                            </div>
+                        </div>
+        
+                    <!--************Card 3************ -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-left" data-aos-delay="300">
+                            <div class="team-item">
+                                <img src="./images/tourist3.jpg" alt="Guide 3" class="img-fluid">
+                                <div class="intro">
+                                    <h5 style="text-align: center;">Ava Garcia</h5>
+                                    <p>Their experience also includes first-aid training, navigation skills, and fostering a spirit of adventure. Perfect for beginners and experienced trekkers alike, they make every outdoors.</p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center icon" style="margin-top: -19px;">
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="text-center p-4" style="height: 90px;">
+                                  <h5 class="mb-0">Beach and Island Tour Guide</h5>
+                                 
+                              </div>
+                            </div>
+                        </div>
+        
+                      <!--************Card 4************ -->
+                        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="team-item">
+                                <img src="./images/tourist4.jpeg" alt="Guide 4" class="img-fluid">
+                                <div class="intro">
+                                    <h5 style="text-align: center;">Sophia Khan</h5>
+                                    <p>Specializing in tropical escapes, these guides offer immersive experiences along and exotic islands. With in-depth knowledge of marine  like snorkeling, diving tours, and beachcombing. </p>
+                                </div>
+                                <div class="position-relative d-flex justify-content-center icon" style="margin-top: -19px;">
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-twitter"></i></a>
+                                    <a href="" class="btn btn-square mx-1"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div class="text-center p-4" style="height: 90px;">
+                                  <h5 class="mb-0">Cultural and Heritage Guide</h5>
+                                  
+                              </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        
+            <!-- *******************Guide******** end**************888 -->
+
+
+            <!-- *************88Testimonal section************ -->
+
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="text-center" data-aos="fade-up">
+                        <h6 class="section-title bg-white text-center px-3" style="color: #86b817;">Testimonial</h6>
+                        <h1 class="mb-5">Our Clients Say!!!</h1>
+                    </div>
+        
+              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators" data-aos="zoom-in">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #86b817; position: relative;top: 70px;"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #86b817; position: relative;top: 70px;"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #86b817; position: relative;top: 70px;"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row" data-aos="fade-up">
+                      <div class="col-md-4 mb-3" data-aos="fade-right">
+          
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/newtest1.png" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Project Manager</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">A project manager is a professional responsible for planning, executing, and overseeing projects within an organization. They ensure that projects are completed on time, within budget, and meet the desired objectives.</p>
+                            
+                          </div>
+                        </div>
+          
+                      </div>
+          
+                      <div class="col-md-4 mb-3" data-aos="fade-up">
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/newtest2.png" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Head Manager</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">A head manager is a senior-level professional responsible for overseeing the operations and performance of an entire department, division, or company. They play a key  developing strategies, and  that the organization  efficiently. </p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3" data-aos="fade-left">
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/test3.PNG" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Execution Manager</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">An execution manager is responsible for overseeing the implementation of plans, strategies, and projects within an organization. Their role focuses on ensuring that tasks and on time, and within the allocated budget.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+        
+                  <div class="carousel-item">
+                    <div class="row" data-aos="fade-up">
+                      <div class="col-md-4 mb-3" data-aos="fade-right">
+          
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/test5.png" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Project Supervisor</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">A project supervisor is responsible for overseeing the day-to-day operations and execution of a specific project. They ensure that Helping assign tasks to team members the project is progressing  and ensuring that team members are working efficiently. </p>
+                            
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col-md-4 mb-3" data-aos="fade-up">
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/test6.jpg" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Co-Supervisor</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">A co-supervisor is typically a secondary or assistant supervisor who works alongside the main supervisor to help and oversee Monitoring project schedules and making sure a project, team, or department. The co-supervisor of leadership and supervision</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3" data-aos="fade-left">
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/test8.jpeg" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">HR Manager</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">An HR Manager (Human Resources Manager) is responsible for overseeing the human resources department of an organization. Their role involves managing employee relations, ensuring compliance with labor laws, </p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+        
+                  <div class="carousel-item">
+                    <div class="row">
+                      <div class="col-md-4 mb-3">
+          
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/test11.jpeg" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Head Department</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">within an organization or institution. Their role involves managing the operations, staff, and performance of their department, ensuring that it meets the organization's objectives and maintains high standards of efficiency,</p>
+                            
+                          </div>
+                        </div>
+          
+                      </div>
+          
+                      <div class="col-md-4 mb-3">
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/test12.jpeg" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Head Coodnator</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">A Head Coordinator is a senior role responsible for organizing, managing, and overseeing the coordination of activities, projects, or events within an organization. They ensure executed smoothly, resources are allocated effectively,</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <div class="card text-center" style="background: #86b817; margin: 0 20px;padding: 0 10px;border-radius: 20px; border: 0;">
+                          <img class="card-img-top" src="./images/test13.jpeg" alt="" style=" max-width: 100px;border-radius: 50%;margin: 15px auto 0;box-shadow: 0 8px 20px -4px #95abbb;width: 100px;height: 100px;">
+                          <div class="card-body">
+                            <h4 style="color: white;font-size: 21px;line-height: 1.3;">Rone Galle
+                              <br> <span style="font-size: 18px;color: black;">Company CEO</span></h4>
+                              <p class="card-text" style=" font-size: 18px;color: white;padding-bottom: 15px;">The Chief Executive Officer (CEO) is the highest-ranking executive in a company or organization, responsible for making major corporate decisions, managing overall operations, and between the board of directors and the company.</p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+       
+      </div>
+      </div>
+
+      <!-- ******************End testimonal**************888 -->
+
+                    <!-- *************Start Footer****************** -->
+
+                    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+                        <div class="container py-5">
+                            <div class="row g-5">
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="text-white mb-3">Company</h4>
+                                    <a href="" class="btn btn-link" style="color: #86b817; text-decoration: none;">About Us</a>
+                                    <a href="" class="btn btn-link" style="color: #86b817; text-decoration: none;">Contact Us</a>
+                                    <a href="" class="btn btn-link" style="color: #86b817; text-decoration: none;">Privacy Policy</a>
+                                    <a href="" class="btn btn-link" style="color: #86b817; text-decoration: none;">Terms $ Conditions</a>
+                                    <a href="" class="btn btn-link" style="color: #86b817; text-decoration: none;">FAQ $ Help</a>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="text-white mb-3">Contact</h4>
+                                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+123456789</p>
+                                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@gmail.com</p>
+
+                                    <div class="d-flex pt-2">
+                                        <a href="" class="btn btn-outline-light btn-social">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+
+                                        <a href="" class="btn btn-outline-light btn-social">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+
+                                        <a href="" class="btn btn-outline-light btn-social">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+
+                                        <a href="" class="btn btn-outline-light btn-social">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </div>
+                                   
+                                </div>
+
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="text-white mb-3">Gallery</h4>
+
+                                    <div class="row g-2 pt-2">
+
+                                        <div class="col-4">
+                                            <img src="./images/gallery1.jpeg" alt="" class="img-fluid bg-light p-1">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="./images/gallery2.jpeg" alt="" class="img-fluid bg-light p-1" style="width: 90px; height: 70px;">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="./images/gallery3.jpg" alt="" class="img-fluid bg-light p-1" style="width: 90px; height: 70px;">
+                                        </div>
+
+                                        <div class="col-4">
+                                            <img src="./images/gallery4.jpeg" alt="" class="img-fluid bg-light p-1">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="./images/gallery5.jpg" alt="" class="img-fluid bg-light p-1" style="width: 90px; height: 70px;">
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="./images/galerry6.jpeg" alt="" class="img-fluid bg-light p-1">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-6">
+                                    <h4 class="text-white mb-3">Newsletter</h4>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicessitatibus doloribus nam magnam placeat illo dignissimos accusamus optio?</p>
+                                    <div class="position-relative mx-auto" style="max-width: 400px;">
+
+                                        <input type="text" class="form-control w-100 py-3 ps-4 pe-5" placeholder="Your Email" style="border: #86b817;">
+                                        <button class="btn  py-2 position-absolute top-0 end-0 mt-2 me-2" type="button" style="background-color: #86b817;">SignUp</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="container">
+                            <div class="copyright">
+                                <div class="row">
+                                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">Presented By <a href="" class="border-bottom" style="color: #86b817; text-decoration: none;">Kanwal</a>Frontend Developer</div>
+                                    <div class="col-md-6 text-center text-md-end">
+                                        <div class="footer-menu">
+                                            <a href="" class="" style="color: #86b817; text-decoration: none;">Home</a>
+                                            <a href="" class="" style="color: #86b817; text-decoration: none;">Cookies</a>
+                                            <a href="" class="" style="color: #86b817; text-decoration: none;">Help</a>
+                                            <a href="" class="" style="color: #86b817; text-decoration: none;">FQAs</a>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ****************end footer**************8 -->
+
+                    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                    <script>
+                      AOS.init({
+                        offset: 220, 
+                          delay: 340, 
+                      });
+                    </script>
+
+
+</body>
+
+ 
+<script src="./Travel.js"></script>
+<!--**********888 Bootstrap JS************-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+<!-- ****************888js aos cdn* -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</html>

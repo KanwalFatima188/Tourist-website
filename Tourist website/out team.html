@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Website</title>
+    <!-- *******Google fonts family****** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- *******Bootstrap cdn****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+     <!-- *******Google fonts****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- *******Google Icons****** -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <!-- ************Aos cdn css********** -->
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+       
+     * {
+     font-family: "Oleo Script", system-ui;
+     font-weight: 400;
+     font-style: normal;
+     box-sizing: border-box;
+     }
+ 
+    body {
+     overflow-x: hidden;
+     }
+ 
+ 
+    .navbar-light .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 25px;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.5s;
+    outline: none;
+ 
+  
+     }
+
+   .navbar-light{
+    background-color: rgb(71, 71, 71);
+ 
+      }
+
+    .navbar-light .navbar-nav .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+     }
+
+    .navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 15px;
+    
+     }
+
+     @media (max-width: 768px) {
+    .navbar-nav.btn {
+        text-align: center;
+    }
+    .hero-header {
+        height: 100vh;
+     }
+   }
+
+
+   @media (min-width: 992px) {
+    .navbar-light {
+       
+        width: 100%;
+        left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
+    }
+
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -9px;
+        left: 50%;
+        background: #86b817;
+        transition: 0.5s;
+    }
+  }
+
+
+.dropdown-item:hover, 
+.dropdown-item:active, 
+.dropdown-item.active {
+    background-color: #86b817 !important;
+   
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+  
+    transition: all 0.3s ease;
+  
+}
+
+.dropdown-menu:hover {
+    background:gray;
+    color: white;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+ 
+ 
+         .hero-section {
+             background-image: url('./images/team\ int.jpeg');
+             background-size: cover;
+             background-position: center;
+             height: 75vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             position: relative;
+         }
+ 
+         .hero-content {
+             text-align: center;
+             color: #fff;
+             z-index: 1;
+         }
+ 
+         .hero-content h1 {
+             font-size: 3rem;
+             font-weight: 700;
+             margin-bottom: 1rem;
+         }
+ 
+         .hero-content p {
+             font-size: 1.2rem;
+             opacity: 0.8;
+             color: white;
+         }
+ 
+         .overlay {
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background-color: rgba(0, 0, 0, 0.4);
+         }
+ 
+         .search-icon {
+             color: #fff;
+             font-size: 1.2rem;
+             cursor: pointer;
+         }
+
+         .why-choose-section {
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.feature-box {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #86b817;
+}
+
+.feature-description {
+    font-size: 14px;
+    color:black;
+}
+
+.icon {
+    color: #3d9b4e;
+}
+
+.icon img {
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.feature-box:hover .icon img {
+    filter: grayscale(0%);
+}
+
+
+@media (max-width: 768px) {
+    .feature-box {
+        margin-bottom: 30px;
+    }
+}
+
+
+.story-section {
+    background-color: #f8f9fa;
+}
+
+.story-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.story-subtitle {
+    font-size: 1.2rem;
+    color: #0a0a0a;
+    margin-bottom: 20px;
+}
+
+.story-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #e74c3c;
+    bottom: -10px;
+    left: 0;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .profile-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .profile-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .title {
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        .share-icon {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .footer-section {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 3rem 0;
+        }
+
+        .newsletter-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-text {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            background-color: transparent;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 0.75rem 1rem;
+        }
+
+        .form-control:focus {
+            background-color: transparent;
+            color: #fff;
+            box-shadow: none;
+            border-color: #666;
+        }
+
+        .btn-submit {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+        }
+
+        .footer-image {
+           height: 300px;
+            object-fit: cover;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #ffffff;
+            margin-top: 2rem;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: #c6bfbf;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+
+         </style>
+         </head>
+         <body>
+    <!-- ************ Hero Section ************ -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container">
+            <a href="#" class="navbar-brand" data-aos="fade-right">
+                <h1 class="m-0" style="color: #86b817;"><i class="fa fa-map-marked-alt"></i> Tourist</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" data-aos="fade-left">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent" data-aos="fade-down" data-aos-duration="1200">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="./Travel.html" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="100">Home</a></li>
+                    <li class="nav-item dropdown" data-aos="fade" data-aos-delay="200">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./our journey.html">Our Journey</a></li>
+                            <li><a class="dropdown-item" href="./out team.html">Our Team</a></li>
+                            <li><a class="dropdown-item" href="./Ourpricing.html">Our Pricing Plan</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" data-aos="fade" data-aos-delay="300">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./accomodation.html">Accommodation</a></li>
+                            <li><a class="dropdown-item" href="./transportation.html">Transportation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#destination" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="400">Destination</a></li>
+                    <li class="nav-item"><a href="#packages" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="500">Packages</a></li>
+                    <li class="nav-item"><a href="#onlinebooking" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="600">Online Booking</a></li>
+                    <li class="nav-item"><a href="#ourguide" class="nav-link"style="color: white;" data-aos="fade" data-aos-delay="700">Our Guide</a></li>
+                </ul>
+                <a href="./form.html" class="btn rounded-pill ms-lg-3" style="background-color: #86b817; color: white; width: 100px;" data-aos="fade" data-aos-delay="800">Register</a>
+            </div>
+        </div>
+    </nav>
+        <!-- ************ End Main navbar ************ -->
+    
+
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-down">Our Team</h1>
+            <p data-aos="fade-left">HOME | About</p>
+        </div>
+    </header>
+
+
+     <section class="why-choose-section py-5">
+        <div class="container text-center">
+            <h2 class="section-title" data-aos="fade-up">Choose Your Opportunities</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Local Expertise: We partner with local guides to give you an authentic experience.</p>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="feature-box p-4">
+                        <div class="icon mb-3">
+                            <img src="./images/client.PNG" alt="Icon 1" style="width: 200px; height: 200px; border-radius: 50%;">
+                        </div>
+                        <h5 class="feature-title">+ 1000 Customers</h5>
+                        <p class="feature-description">
+                            we are thrilled to announce that we’ve reached an incredible milestone: 1,000 satisfied customers! This achievement is a testament to our commitment to providing unforgettable travel experiences tailored to each of our clients.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="feature-box p-4">
+                        <div class="icon mb-3">
+                            <img src="./images/support member.png" alt="Icon 2" style="width: 200px; height: 200px; border-radius: 50%;">
+                        </div>
+                        <h5 class="feature-title">H24 Support</h5>
+                        <p class="feature-description">
+                            we understand that exceptional customer support is essential to creating memorable travel experiences. That’s why we’re committed to being there for you every step of the way.we’re here to make your travel experience as smooth and enjoyable as possible.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="feature-box p-4">
+                        <div class="icon mb-3">
+                            <img src="./images/location.webp" alt="Icon 3" style="width: 200px; height: 200px; border-radius: 50%;">
+                        </div>
+                        <h5 class="feature-title">+ 575 Locations</h5>
+                        <p class="feature-description">
+                            we believe in the beauty of exploration. That’s why we offer exciting trips to 53 stunning destinations around the globe. Each location has its own unique charm and for you to discover.Our trips are designed to cater to various interests, from adventure seekers to cultural.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box p-4">
+                        <div class="icon mb-3">
+                            <img src="./images/newhelpline.png" alt="Icon 4" style="width: 200px; height: 200px; border-radius: 50%;">
+                        </div>
+                        <h5 class="feature-title">Help Direct Line</h5>
+                        <p class="feature-description">
+                            we prioritize your travel experience, and our dedicated support team is here to assist you. For immediate assistance, you can reach us directly at our help line:Whether you have questions about your booking, need assistance while traveling, or want to make changes to your itinerary.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box p-4">
+                        <div class="icon mb-3">
+                            <img src="./images/newsecure.png" alt="Icon 5" style="width: 200px; height: 200px; border-radius: 50%;">
+                        </div>
+                        <h5 class="feature-title">Secure Payments</h5>
+                        <p class="feature-description">
+                            we understand that security is a top priority when it comes to online transactions. That’s why we offer secure payment options to ensure your financial information is protected throughout your booking process.We accept a variety of reputable payment methods, including credit cards giving you flexibility and peace of mind.
+
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box p-4">
+                        <div class="icon mb-3">
+                            <img src="./images/via chat.png" alt="Icon 6"  style="width: 200px; height: 200px; border-radius: 50%;" >
+                        </div>
+                        <h5 class="feature-title">Support via Chat</h5>
+                        <p class="feature-description">
+                            Chat support refers to real-time customer service provided via a messaging platform. It allows businesses to engage with users directly through a chat interface, offering quick responses to inquiries, troubleshooting help, and personalized assistance.Customer interacts with a human representative.
+                            
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="story-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="./images/journeystory.jpg" alt="Story Image" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                    <h2 class="story-title">Our Origins and Story</h2>
+                    <p class="story-subtitle">Mention any fun or personal reason for the trip (celebration, adventure, relaxation.)</p>
+                    <p>"Our journey began in the heart of October, chasing the autumn leaves in Kyoto, Japan. We had always dreamt of wandering under fiery red maple trees, sipping green tea, and immersing ourselves in ancient temples."</p>
+                    <p>"Ordering food in Paris became an adventure of its own—‘Fromage’ sounded fancy until we realized it meant nothing but ‘cheese,’ which we somehow ordered thrice in a row!"</p>
+                    <p><strong>"As we boarded the plane back home, our hearts were full and our bags packed with memories (and a little too much olive oil from Greece)."</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container mt-5">
+        <div class="row gy-4">
+            
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="profile-card position-relative">
+                    <img src="./images/software.jpeg" class="card-img-top" alt="Profile Image">
+                    <div class="card-body">
+                        <div class="name">Application Support Engineer</div>
+                        <div class="title">Technical Issue Resolution:</div>
+                    </div>
+                    <div class="share-icon">
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="profile-card position-relative">
+                    <img src="./images/technical.jpg" class="card-img-top" alt="Profile Image">
+                    <div class="card-body">
+                        <div class="name">Technical Engineer</div>
+                        <div class="title">Troubleshooting and Problem Solving:</div>
+                    </div>
+                    <div class="share-icon">
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+           
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="profile-card position-relative">
+                    <img src="./images/tourguide.webp" class="card-img-top" alt="Profile Image">
+                    <div class="card-body">
+                        <div class="name">Tour Guider</div>
+                        <div class="title">Nature or Adventure Guide:</div>
+                    </div>
+                    <div class="share-icon">
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+           
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="profile-card position-relative">
+                    <img src="./images/photographe.avif" class="card-img-top" alt="Profile Image">
+                    <div class="card-body">
+                        <div class="name">Photographer Engineer</div>
+                        <div class="title">Image Processing and Algorithms:</div>
+                    </div>
+                    <div class="share-icon">
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+           
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="profile-card position-relative">
+                    <img src="./images/transport.webp" class="card-img-top" alt="Profile Image">
+                    <div class="card-body">
+                        <div class="name">Transportation</div>
+                        <div class="title">Land Transportation</div>
+                    </div>
+                    <div class="share-icon">
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+          
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="profile-card position-relative">
+                    <img src="./images/security check.jpeg" class="card-img-top" alt="Profile Image">
+                    <div class="card-body">
+                        <div class="name">Security MAnagement</div>
+                        <div class="title">Risk Assessment</div>
+                    </div>
+                    <div class="share-icon">
+                        <button class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-share"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="./images/map.jpeg" alt="Mountain Landscape" class="footer-image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="newsletter-title">NEWSLETTER SIGNUP</h2>
+                    <p class="newsletter-text">SIGN UP NOW TO RECEIVE HOT SPECIAL OFFERS AND INFORMATION ABOUT THE BEST TOURS!</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your e-mail" aria-label="Email" aria-describedby="button-addon2">
+                            <button class="btn btn-submit" type="button" id="button-addon2">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr class="mt-4 mb-4" style="border-color: #444;">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">Presented By <a href="" class="border-bottom" style="color: #86b817; text-decoration: none;">Kanwal</a>Frontend Developer</div>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 220, 
+      delay: 340, 
+  });
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+<!-- ****************888js aos cdn* -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</html>

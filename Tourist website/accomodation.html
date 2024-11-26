@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Website</title>
+    <!-- *******Google fonts family****** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+    <!-- *******Bootstrap cdn****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+     <!-- *******Google fonts****** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+     <!-- *******Google Icons****** -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <!-- ************Aos cdn css********** -->
+      <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+       
+
+     * {
+     font-family: "Oleo Script", system-ui;
+     font-weight: 400;
+     font-style: normal;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     overflow-x: hidden;
+ }
+ 
+ .navbar-light .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 25px;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.5s;
+    outline: none;
+ 
+  
+}
+
+.navbar-light{
+    background-color: rgb(71, 71, 71);
+ 
+}
+
+.navbar-light .navbar-nav .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 15px;
+    
+}
+
+@media (max-width: 768px) {
+    .navbar-nav.btn {
+        text-align: center;
+    }
+    .hero-header {
+        height: 100vh;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .navbar-light {
+       
+        width: 100%;
+        left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 999;
+    }
+
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -9px;
+        left: 50%;
+        background: #86b817;
+        transition: 0.5s;
+    }
+}
+
+
+.dropdown-item:hover, 
+.dropdown-item:active, 
+.dropdown-item.active {
+    background-color: #86b817 !important;
+   
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+  
+    transition: all 0.3s ease;
+  
+}
+
+.dropdown-menu:hover {
+    background:gray;
+    color: white;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animated {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+ 
+ 
+ 
+         .hero-section {
+             background-image: url('./images/travelaccodate.jpeg');
+             background-size: cover;
+             background-position: center;
+             height: 75vh;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             position: relative;
+         }
+ 
+         .hero-content {
+             text-align: center;
+             color: #fff;
+             z-index: 1;
+         }
+ 
+         .hero-content h1 {
+             font-size: 3rem;
+             font-weight: 700;
+             margin-bottom: 1rem;
+         }
+ 
+         .hero-content p {
+             font-size: 1.2rem;
+             opacity: 0.8;
+         }
+ 
+         .overlay {
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background-color: rgba(0, 0, 0, 0.4);
+         }
+ 
+         .search-icon {
+             color: #fff;
+             font-size: 1.2rem;
+             cursor: pointer;
+         }
+
+         .image-container {
+  position: relative;
+}
+
+.client-info {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+}
+
+.like-icon {
+  font-size: 1.5rem;
+  color: #0d6efd;
+}
+
+.features .icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.bg-light-green {
+  background-color: #28a745;
+}
+
+.bg-light-red {
+  background-color: #dc3545;
+}
+
+.bg-light-orange {
+  background-color: #fd7e14;
+}
+
+.bg-light-blue {
+  background-color: #17a2b8;
+}
+
+
+
+.hotel-card {
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-10px);
+}
+
+.location-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.price span {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.rating-value {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.testimonial-card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .emoji-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff9800;
+            color: white;
+            border-radius: 8px;
+            padding: 5px 8px;
+            font-size: 18px;
+        }
+    
+        .quote-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+    
+        .quote-text {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+    
+        .star-rating {
+            color: #ffc107;
+        }
+    
+        .author-name {
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+    
+        .author-title {
+            font-size: 14px;
+            color: #6c757d;
+        }
+    
+        
+        @media (max-width: 768px) {
+            .quote-text {
+                font-size: 14px;
+            }
+            .author-title {
+                font-size: 12px;
+            }
+            .emoji-badge {
+                font-size: 16px;
+            }
+            .image-container img {
+                height: auto;
+            }
+        }
+
+
+        .explore-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.explore-section h1 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.location-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.location-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.location-item:hover .location-image {
+    transform: scale(1.1); 
+}
+
+.location-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.location-distance {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .location-image {
+        width: 120px;
+        height: 120px; 
+    }
+
+    .location-name {
+        font-size: 16px;
+    }
+
+    .location-distance {
+        font-size: 12px;
+    }
+}
+
+        .footer-section {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 3rem 0;
+        }
+
+        .newsletter-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-text {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            background-color: transparent;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 0.75rem 1rem;
+        }
+
+        .form-control:focus {
+            background-color: transparent;
+            color: #fff;
+            box-shadow: none;
+            border-color: #666;
+        }
+
+        .btn-submit {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+        }
+
+        .footer-image {
+           height: 300px;
+            object-fit: cover;
+        }
+
+        .copyright {
+            font-size: 1.6rem;
+            color: #fff3f3;
+            margin-top: 2rem;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: #777;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+        }
+        </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-aos="fade-down" data-aos-duration="1000">
+    <div class="container">
+        <a href="#" class="navbar-brand" data-aos="fade-right">
+            <h1 class="m-0" style="color: #86b817;"><i class="fa fa-map-marked-alt"></i> Tourist</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" data-aos="fade-left">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent" data-aos="fade-down" data-aos-duration="1200">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="./Travel.html" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="100">Home</a></li>
+                <li class="nav-item dropdown" data-aos="fade" data-aos-delay="200">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./our journey.html">Our Journey</a></li>
+                        <li><a class="dropdown-item" href="./out team.html">Our Team</a></li>
+                        <li><a class="dropdown-item" href="./Ourpricing.html">Our Pricing Plan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" data-aos="fade" data-aos-delay="300">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./accomodation.html">Accommodation</a></li>
+                        <li><a class="dropdown-item" href="./transportation.html">Transportation</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#destination" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="400">Destination</a></li>
+                <li class="nav-item"><a href="#packages" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="500">Packages</a></li>
+                <li class="nav-item"><a href="#onlinebooking" class="nav-link" style="color: white;" data-aos="fade" data-aos-delay="600">Online Booking</a></li>
+                <li class="nav-item"><a href="#ourguide" class="nav-link"style="color: white;" data-aos="fade" data-aos-delay="700">Our Guide</a></li>
+            </ul>
+            <a href="./form.html" class="btn rounded-pill ms-lg-3" style="background-color: #86b817; color: white; width: 100px;" data-aos="fade" data-aos-delay="800">Register</a>
+        </div>
+    </div>
+</nav>
+
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 data-aos="fade-down">Our Accomodation</h1>
+            <p data-aos="fade-left">HOME | Services </p>
+        </div>
+    </header>
+
+    <br>
+
+
+    <div class="container my-5">
+        <div class="row align-items-center">
+         
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="image-container position-relative">
+              <img src="./images/mainaccodate.jpeg"class="img-fluid rounded-3"alt="Hotel View"/ style="width: 600px; height: 400px;">
+            
+              <div class="client-info position-absolute bottom-0 start-0 p-3">
+                <div class="d-flex align-items-center" data-aos="fade-up" data-aos-delay="100">
+                  <span class="like-icon me-2">
+                    <i class="bi bi-hand-thumbs-up"></i>
+                  </span>
+                  <div class="d-flex">
+                    <img
+                      src="https://i.pravatar.cc/30?img=1"
+                      class="rounded-circle me-1"
+                      alt="Client 1"
+                    />
+                    <img
+                      src="https://i.pravatar.cc/30?img=2"
+                      class="rounded-circle me-1"
+                      alt="Client 2"
+                    />
+                    <img
+                      src="https://i.pravatar.cc/30?img=3"
+                      class="rounded-circle me-1"
+                      alt="Client 3"
+                    />
+                    <img
+                      src="https://i.pravatar.cc/30?img=4"
+                      class="rounded-circle me-1"
+                      alt="Client 4"
+                    />
+                  </div>
+                </div>
+                <div class="mt-2" data-aos="fade-up" data-aos-delay="200">
+                  <span class="fw-bold">1K+ Clients</span>
+                  <span class="ms-3">Rating: <strong>4.5 ★</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          
+         
+          <div class="col-md-6">
+            
+            <h2 class="fw-bold">The Best Holidays Start Here!</h2>
+            <p>
+              Book your hotel with us and don't forget to grab an awesome hotel
+              deal to save massive on your stay.
+            </p>
+      
+            <br>
+            <div class="features">
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon bg-light-green rounded-circle me-3">
+                  <i class="bi bi-emoji-smile"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Quality Food</h5>
+                  <p class="mb-0">
+                    Departure defective arranging rapturous did. Conduct denied
+                    adding worthy little.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon bg-light-red rounded-circle me-3">
+                  <i class="bi bi-lightning-fill"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">Quick Services</h5>
+                  <p class="mb-0">
+                    Supposing so be resolving breakfast am or perfectly.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="d-flex align-items-center mb-4">
+                <div class="icon bg-light-orange rounded-circle me-3">
+                  <i class="bi bi-shield-lock-fill"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">High Security</h5>
+                  <p class="mb-0">
+                    Arranging rapturous did believe him all had supported.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="d-flex align-items-center">
+                <div class="icon bg-light-blue rounded-circle me-3">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0 fw-bold">24 Hours Alert</h5>
+                  <p class="mb-0">
+                    Rapturous did believe him all had supported.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+
+
+      <div class="container my-5">
+        <h2 class="text-center fw-bold mb-5">Featured Hotels</h2>
+      
+        <div class="row">
+          
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="hotel-card">
+              <img src="./images/newyork hotel.jpeg"class="img-fluid rounded-3"alt="Baga Comfort"/ style="width: 400px; height:300px;">
+              <div class="location-badge">
+                <i class="bi bi-geo-alt"></i> New York
+              </div>
+              <h5 class="mt-3 fw-bold">Baga Comfort</h5>
+              <p class="price text-success">$455 <span>/starting at</span></p>
+              <div class="d-flex align-items-center">
+                <span class="rating-value">455</span>
+                <i class="bi bi-star-fill ms-2 text-warning"></i>
+              </div>
+            </div>
+          </div>
+      
+          
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="hotel-card">
+              <img src="./images/califoria.jpeg"class="img-fluid rounded-3"alt="New Apollo Hotel"/ style="width: 400px; height:300px;">
+              <div class="location-badge">
+                <i class="bi bi-geo-alt"></i> California
+              </div>
+              <h5 class="mt-3 fw-bold">New Apollo Hotel</h5>
+              <p class="price text-success">$585 <span>/starting at</span></p>
+              <div class="d-flex align-items-center">
+                <span class="rating-value">585</span>
+                <i class="bi bi-star-fill ms-2 text-warning"></i>
+              </div>
+            </div>
+          </div>
+      
+         
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="hotel-card">
+              <img src="./images/los angel.jpeg"class="img-fluid rounded-3"alt="New Age Hotel"/ style="width: 400px; height:300px;">
+              <div class="location-badge">
+                <i class="bi bi-geo-alt"></i> Los Angeles
+              </div>
+              <h5 class="mt-3 fw-bold">New Age Hotel</h5>
+              <p class="price text-success">$385 <span>/starting at</span></p>
+              <div class="d-flex align-items-center">
+                <span class="rating-value">385</span>
+                <i class="bi bi-star-fill ms-2 text-warning"></i>
+              </div>
+            </div>
+          </div>
+      
+       
+          <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="hotel-card">
+              <img src="./images/chicago.jpg"class="img-fluid rounded-3"alt="Helios Beach Resort"/ style="width: 400px; height:300px;">
+              <div class="location-badge">
+                <i class="bi bi-geo-alt"></i> Chicago
+              </div>
+              <h5 class="mt-3 fw-bold">Helios Beach Resort</h5>
+              <p class="price text-success">$665 <span>/starting at</span></p>
+              <div class="d-flex align-items-center">
+                <span class="rating-value">665</span>
+                <i class="bi bi-star-fill ms-2 text-warning"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="container">
+        <div class="row">
+          
+            <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-delay="100">
+                <div class="testimonial-card">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-12 col-md-5 image-container position-relative">
+                            <img src="./images/mainpointer.jpg" class="img-fluid w-100" alt="Testimonial Image" style="height: 350px; object-fit: cover;">
+                            <div class="emoji-badge">😮</div>
+                        </div>
+                        <div class="col-12 col-md-7 quote-container">
+                            <blockquote class="quote-text">
+                                <strong>Serviced Apartments</strong>  
+                                Fully furnished apartments available for short- or long-term stays, offering hotel-like amenities such as housekeeping and front desk services.  
+                                <strong>Camping and Glamping</strong>  
+                                Traditional camping involves staying in tents or RVs. Glamping offers luxurious accommodations like yurts, safari tents, or treehouses.
+                            </blockquote>
+                            <div class="star-rating">
+                                ⭐⭐⭐⭐<span style="color: #e0e0e0;">⭐</span>
+                            </div>
+                            <p class="author-name">Billy Vasquez</p>
+                            <p class="author-title">CEO of WorldTour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
+                <div class="testimonial-card">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-12 col-md-5 image-container position-relative">
+                            <img src="./images/thirdpoint.jpeg" class="img-fluid w-100" alt="Testimonial Image" style="height: 350px; object-fit: cover;">
+                            <div class="emoji-badge">😮</div>
+                        </div>
+                        <div class="col-12 col-md-7 quote-container">
+                            <blockquote class="quote-text">
+                                <strong>Technology Integration:</strong>  
+                                Increased use of technology in booking processes, contactless check-in/out, mobile room keys, and smart room features (e.g., temperature control, lighting).
+                                <strong>Hotels</strong>  
+                                Full-Service Hotels offer a range of amenities like restaurants and fitness centers. Limited-Service Hotels provide basic accommodations with fewer amenities.
+                            </blockquote>
+                            <div class="star-rating">
+                                ⭐⭐⭐⭐<span style="color: #e0e0e0;">⭐</span>
+                            </div>
+                            <p class="author-name">Billy Vasquez</p>
+                            <p class="author-title">CEO of Tourism</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="explore-section">
+        <h1>Explore Nearby</h1>
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="./images/san.jpg" alt="San Francisco" class="location-image">
+                <p class="location-name">San Francisco</p>
+                <p class="location-distance">13 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="./images/lossi.jpeg" alt="Los Angeles" class="location-image">
+                <p class="location-name">Los Angeles</p>
+                <p class="location-distance">25 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="300">
+              <img src="./images/miami.jpeg" alt="Sanjosh" class="location-image">
+                <p class="location-name">Miami</p>
+                <p class="location-distance">45 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="400">
+                <img src="./images/sanjosh.jpeg" alt="Sanjosh" class="location-image">
+                <p class="location-name">Sanjosh</p>
+                <p class="location-distance">55 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="500">
+                <img src="./images/new york3.jpeg" alt="New York" class="location-image">
+                <p class="location-name">New York</p>
+                <p class="location-distance">1 hour drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="600">
+                <img src="./images/justin.jpeg" alt="North Justen" class="location-image">
+                <p class="location-name">North Justen</p>
+                <p class="location-distance">2 hours drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="700">
+                <img src="./images/rio.jpeg" alt="Rio" class="location-image">
+                <p class="location-name">Rio</p>
+                <p class="location-distance">20 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="800">
+                <img src="./images/laster.jpeg" alt="Las Vegas" class="location-image">
+                <p class="location-name">Las Vegas</p>
+                <p class="location-distance">3 hours drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="900">
+                <img src="./images/texas.jpeg" alt="Texas" class="location-image">
+                <p class="location-name">Texas</p>
+                <p class="location-distance">55 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="1000">
+                <img src="./images/chicagomain.jpeg" alt="Chicago" class="location-image">
+                <p class="location-name">Chicago</p>
+                <p class="location-distance">13 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="1100">
+                <img src="./images/kegan.jpeg" alt="New Keagan" class="location-image">
+                <p class="location-name">New Keagan</p>
+                <p class="location-distance">35 mins drive</p>
+            </div>
+            <div class="col-6 col-md-4 col-lg-2 location-item" data-aos="fade-up" data-aos-delay="1200">
+                <img src="./images/osloo.jpeg" alt="Oslo" class="location-image">
+                <p class="location-name">Oslo</p>
+                <p class="location-distance">1 hour 13 mins drive</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="./images/secondnew.jpeg" alt="Mountain Landscape" class="footer-image">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="newsletter-title">NEWSLETTER SIGNUP</h2>
+                    <p class="newsletter-text">SIGN UP NOW TO RECEIVE HOT SPECIAL OFFERS AND INFORMATION ABOUT THE BEST TOURS!</p>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your e-mail" aria-label="Email" aria-describedby="button-addon2">
+                            <button class="btn btn-submit" type="button" id="button-addon2">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <hr class="mt-4 mb-4" style="border-color: #444;">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">Presented By <a href="" class="border-bottom" style="color: #86b817; text-decoration: none;">Kanwal</a>Frontend Developer</div>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 220, 
+      delay: 340, 
+  });
+</script>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+<!-- ****************888js aos cdn* -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</html>
